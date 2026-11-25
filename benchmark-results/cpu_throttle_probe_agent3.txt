@@ -1,0 +1,12 @@
+# agent=3, truoc khi chay Locust, 2026-11-25T10:33:02Z
+k5-day14-observability-agent-1 usage_usec 19348205 user_usec 18008591 system_usec 1339613 core_sched.force_idle_usec 0 nr_periods 709 nr_throttled 178 throttled_usec 15143987 nr_bursts 0 burst_usec 0 
+k5-day14-observability-agent-2 usage_usec 2013358 user_usec 1875051 system_usec 138307 core_sched.force_idle_usec 0 nr_periods 115 nr_throttled 36 throttled_usec 1726697 nr_bursts 0 burst_usec 0 
+k5-day14-observability-agent-3 usage_usec 2069562 user_usec 1910289 system_usec 159273 core_sched.force_idle_usec 0 nr_periods 118 nr_throttled 35 throttled_usec 1792134 nr_bursts 0 burst_usec 0 
+# Locust headless -u 100 -r 10 -t 45s, 2026-11-25T10:33:02Z
+POST     /ask                                                                                  200    210    220    220    230    250   1700
+GET      /health                                                                                 6      8      9      9     13     19     41
+         Aggregated                                                                            200    210    210    220    230    240   1700
+# sau khi chay xong, 2026-11-25T10:33:48Z
+k5-day14-observability-agent-1 usage_usec 26263745 user_usec 24532628 system_usec 1731116 core_sched.force_idle_usec 0 nr_periods 1157 nr_throttled 208 throttled_usec 17500642 nr_bursts 0 burst_usec 0 
+k5-day14-observability-agent-2 usage_usec 8771671 user_usec 8221823 system_usec 549848 core_sched.force_idle_usec 0 nr_periods 563 nr_throttled 65 throttled_usec 4163234 nr_bursts 0 burst_usec 0 
+k5-day14-observability-agent-3 usage_usec 8931667 user_usec 8331052 system_usec 600615 core_sched.force_idle_usec 0 nr_periods 570 nr_throttled 65 throttled_usec 4286808 nr_bursts 0 burst_usec 0 

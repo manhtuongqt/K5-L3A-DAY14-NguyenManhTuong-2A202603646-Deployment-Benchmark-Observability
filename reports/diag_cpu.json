@@ -1,0 +1,29 @@
+{
+  "note": "Chẩn đoán điểm nghẽn (không thay cho bảng 2.1). Client CPU: resource.getrusage(RUSAGE_CHILDREN) quanh tiến trình load_test.py. Agent CPU: chênh lệch process_cpu_seconds_total ở /metrics trước/sau. Agent v2 cấu hình mặc định, 300 request mỗi lần, agent và load_test.py chạy cùng máy.",
+  "runs": [
+    {
+      "concurrency": 50,
+      "load_report": "diag_load_v2_c50.json",
+      "load_test_exit_code": 0,
+      "rps": 120.64,
+      "latency_avg_ms": 236.8,
+      "latency_p95_ms": 276.5,
+      "client_wall_s": 2.92,
+      "client_user_cpu_s": 0.76,
+      "client_sys_cpu_s": 0.08,
+      "agent_cpu_s": 0.46
+    },
+    {
+      "concurrency": 100,
+      "load_report": "diag_load_v2_c100.json",
+      "load_test_exit_code": 1,
+      "rps": 42.68,
+      "latency_avg_ms": 1482.6,
+      "latency_p95_ms": 4612.9,
+      "client_wall_s": 7.42,
+      "client_user_cpu_s": 5.22,
+      "client_sys_cpu_s": 0.29,
+      "agent_cpu_s": 0.53
+    }
+  ]
+}

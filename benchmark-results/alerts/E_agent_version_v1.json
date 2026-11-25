@@ -1,0 +1,1133 @@
+{
+ "experiment": "E_agent_version_v1",
+ "description": "Thi nghiem E: AGENT_VERSION=v1 (khong retrieval), nen 20 user Locust, 2 agent; ky vong khong alert nao",
+ "change_command": "python3 /tmp/claude-1000/cp8/setenv.py AGENT_VERSION=v1 && docker compose -p k5-day14-observability up -d --scale agent=2",
+ "t_change_utc": "2026-11-25T10:04:43Z",
+ "t_change_epoch": 1795601083.726059,
+ "change_command_duration_s": 1.7,
+ "change_command_returncode": 0,
+ "poll_interval_s": 5,
+ "state_before_change": {
+  "t_epoch": 1795601083.7070446,
+  "t_utc": "10:04:43",
+  "elapsed_s": 0.0,
+  "alerts": [],
+  "metrics": {
+   "error_rate": 0.01411652185814665,
+   "p95_s": 0.29162119920651036,
+   "cost_usd_per_hour": 1.4798910508474716,
+   "instances_up": 2.0,
+   "retrieval_hit_rate_1m": 12.640369423901426,
+   "retrieval_hit_ratio_5m": 1.0,
+   "tokens_per_s_1m": 1558.597000213854,
+   "traffic_rps": 12.970181428512166
+  }
+ },
+ "summary": {
+  "AgentInstanceDown": {
+   "first_seen_pending_or_firing_elapsed_s": 11.7,
+   "first_seen_firing_elapsed_s": null,
+   "activeAt": "2026-11-25T10:04:52.401817116Z",
+   "activeAt_elapsed_s": 8.7
+  }
+ },
+ "expected_alerts": [],
+ "polls": [
+  {
+   "t_epoch": 1795601085.400858,
+   "t_utc": "10:04:45",
+   "elapsed_s": 1.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015151814214827627,
+    "p95_s": 0.29175948190797873,
+    "cost_usd_per_hour": 1.481016813559336,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 12.876733284694197,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1583.5958603759648,
+    "traffic_rps": 13.184151717107026
+   }
+  },
+  {
+   "t_epoch": 1795601090.4154427,
+   "t_utc": "10:04:50",
+   "elapsed_s": 6.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.013540122489795466,
+    "p95_s": 0.2924984645566848,
+    "cost_usd_per_hour": 1.4629072664376495,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.866732606172198,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1466.055336457858,
+    "traffic_rps": 12.182379277562074
+   }
+  },
+  {
+   "t_epoch": 1795601095.4274783,
+   "t_utc": "10:04:55",
+   "elapsed_s": 11.7,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.8:8000",
+     "activeAt": "2026-11-25T10:04:52.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.013758878226913856,
+    "p95_s": 0.29268969454303645,
+    "cost_usd_per_hour": 1.4394958626040328,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.767625925925925,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1295.859342222222,
+    "traffic_rps": 10.765794814814814
+   }
+  },
+  {
+   "t_epoch": 1795601100.4404361,
+   "t_utc": "10:05:00",
+   "elapsed_s": 16.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.012952309814747936,
+    "p95_s": 0.2922093023255814,
+    "cost_usd_per_hour": 1.417952135593234,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.595339166666667,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1158.5272727272727,
+    "traffic_rps": 9.965427424242424
+   }
+  },
+  {
+   "t_epoch": 1795601105.4544816,
+   "t_utc": "10:05:05",
+   "elapsed_s": 21.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011288283987518624,
+    "p95_s": 0.2920394736842105,
+    "cost_usd_per_hour": 1.4092261016949288,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.524906666666666,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1074.690909090909,
+    "traffic_rps": 9.856708571428571
+   }
+  },
+  {
+   "t_epoch": 1795601110.4704342,
+   "t_utc": "10:05:10",
+   "elapsed_s": 26.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011440142885775306,
+    "p95_s": 0.2900763358778625,
+    "cost_usd_per_hour": 1.4019410124534106,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 7.433828888888888,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 994.690909090909,
+    "traffic_rps": 9.82143803030303
+   }
+  },
+  {
+   "t_epoch": 1795601115.4844432,
+   "t_utc": "10:05:15",
+   "elapsed_s": 31.8,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.013322240483300442,
+    "p95_s": 0.286504424778761,
+    "cost_usd_per_hour": 1.4201437489847426,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 6.402429333333333,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 926.0727272727272,
+    "traffic_rps": 9.913877454545455
+   }
+  },
+  {
+   "t_epoch": 1795601120.499799,
+   "t_utc": "10:05:20",
+   "elapsed_s": 36.8,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015356436051507017,
+    "p95_s": 0.2816853932584269,
+    "cost_usd_per_hour": 1.4251954576271322,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 5.329316666666667,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 847.4727272727273,
+    "traffic_rps": 9.934359772727273
+   }
+  },
+  {
+   "t_epoch": 1795601125.5132914,
+   "t_utc": "10:05:25",
+   "elapsed_s": 41.8,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015765650318947527,
+    "p95_s": 0.27083333333333326,
+    "cost_usd_per_hour": 1.411441016949166,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 4.324956666666666,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 772.8,
+    "traffic_rps": 9.920008787878787
+   }
+  },
+  {
+   "t_epoch": 1795601130.5264716,
+   "t_utc": "10:05:30",
+   "elapsed_s": 46.8,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.016741506397464717,
+    "p95_s": 0.2560465116279068,
+    "cost_usd_per_hour": 1.3976371525423863,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 3.2330983333333334,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 689.0181818181818,
+    "traffic_rps": 9.800407727272727
+   }
+  },
+  {
+   "t_epoch": 1795601135.5384784,
+   "t_utc": "10:05:35",
+   "elapsed_s": 51.8,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015835211447804823,
+    "p95_s": 0.23903846153846137,
+    "cost_usd_per_hour": 1.382328610169505,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 2.16209,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 615.2727272727273,
+    "traffic_rps": 9.79136606060606
+   }
+  },
+  {
+   "t_epoch": 1795601140.5514376,
+   "t_utc": "10:05:40",
+   "elapsed_s": 56.8,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.0074074074074074086,
+    "p95_s": 0.19788547610427804,
+    "cost_usd_per_hour": 1.371343728813573,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 547.4363636363636,
+    "traffic_rps": 9.818181818181817
+   }
+  },
+  {
+   "t_epoch": 1795601145.5644374,
+   "t_utc": "10:05:45",
+   "elapsed_s": 61.8,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.005359964971610775,
+    "p95_s": 0.1983103710486816,
+    "cost_usd_per_hour": 1.3545213559322171,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 570.727657037037,
+    "traffic_rps": 10.228702592592594
+   }
+  },
+  {
+   "t_epoch": 1795601150.577614,
+   "t_utc": "10:05:50",
+   "elapsed_s": 66.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.004840924489802037,
+    "p95_s": 0.19812864850592732,
+    "cost_usd_per_hour": 1.3416199322034035,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 626.970763,
+    "traffic_rps": 11.228627
+   }
+  },
+  {
+   "t_epoch": 1795601155.591438,
+   "t_utc": "10:05:55",
+   "elapsed_s": 71.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.004457652303120356,
+    "p95_s": 0.1985061919504644,
+    "cost_usd_per_hour": 1.3281327457627257,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 683.5999999999999,
+    "traffic_rps": 12.236363636363636
+   }
+  },
+  {
+   "t_epoch": 1795601160.6064508,
+   "t_utc": "10:06:00",
+   "elapsed_s": 76.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.004470938897168405,
+    "p95_s": 0.1985170807453416,
+    "cost_usd_per_hour": 1.3110303050847598,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 681.9454545454545,
+    "traffic_rps": 12.2
+   }
+  },
+  {
+   "t_epoch": 1795601165.6224375,
+   "t_utc": "10:06:05",
+   "elapsed_s": 81.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.004431314623338257,
+    "p95_s": 0.19894126738794438,
+    "cost_usd_per_hour": 1.2976675932203532,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 686.6363636363636,
+    "traffic_rps": 12.309090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601170.6354825,
+   "t_utc": "10:06:10",
+   "elapsed_s": 86.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.0029585798816568047,
+    "p95_s": 0.19939447331133356,
+    "cost_usd_per_hour": 1.284652677966116,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 685.9272727272727,
+    "traffic_rps": 12.290909090909091
+   }
+  },
+  {
+   "t_epoch": 1795601175.6494837,
+   "t_utc": "10:06:15",
+   "elapsed_s": 91.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.002949852507374631,
+    "p95_s": 0.19968947326799574,
+    "cost_usd_per_hour": 1.2726720000000145,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 688.5454545454545,
+    "traffic_rps": 12.327272727272728
+   }
+  },
+  {
+   "t_epoch": 1795601180.6624737,
+   "t_utc": "10:06:20",
+   "elapsed_s": 96.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.00145985401459854,
+    "p95_s": 0.1994870354199746,
+    "cost_usd_per_hour": 1.2575483389830653,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 697.3636363636364,
+    "traffic_rps": 12.454545454545455
+   }
+  },
+  {
+   "t_epoch": 1795601185.6745093,
+   "t_utc": "10:06:25",
+   "elapsed_s": 101.9,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.001443001443001443,
+    "p95_s": 0.19913281642824732,
+    "cost_usd_per_hour": 1.2433179661017093,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 706.6545454545454,
+    "traffic_rps": 12.6
+   }
+  },
+  {
+   "t_epoch": 1795601190.6924725,
+   "t_utc": "10:06:30",
+   "elapsed_s": 107.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.0014409221902017292,
+    "p95_s": 0.19912659222488382,
+    "cost_usd_per_hour": 1.231071864406794,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 708.4,
+    "traffic_rps": 12.618181818181817
+   }
+  },
+  {
+   "t_epoch": 1795601195.7054791,
+   "t_utc": "10:06:35",
+   "elapsed_s": 112.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.00306313427308712,
+    "p95_s": 0.19854156732347006,
+    "cost_usd_per_hour": 1.2151263050847596,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 704.5999999999999,
+    "traffic_rps": 12.584010363636363
+   }
+  },
+  {
+   "t_epoch": 1795601200.7272053,
+   "t_utc": "10:06:40",
+   "elapsed_s": 117.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.002947096316440301,
+    "p95_s": 0.19831402167332468,
+    "cost_usd_per_hour": 1.2005444745762845,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 721.1090909090909,
+    "traffic_rps": 12.874308787878787
+   }
+  },
+  {
+   "t_epoch": 1795601205.7415273,
+   "t_utc": "10:06:45",
+   "elapsed_s": 122.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.004383424002997507,
+    "p95_s": 0.19871912618349083,
+    "cost_usd_per_hour": 1.1919714128582877,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 725.8181818181818,
+    "traffic_rps": 12.965934632034632
+   }
+  },
+  {
+   "t_epoch": 1795601210.7608933,
+   "t_utc": "10:06:50",
+   "elapsed_s": 127.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.005752053676029333,
+    "p95_s": 0.19843870502529787,
+    "cost_usd_per_hour": 1.197829320955445,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 722.8727272727273,
+    "traffic_rps": 12.928919924242424
+   }
+  },
+  {
+   "t_epoch": 1795601215.7791083,
+   "t_utc": "10:06:55",
+   "elapsed_s": 132.1,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.0070403609506667075,
+    "p95_s": 0.19853950897080577,
+    "cost_usd_per_hour": 1.2109823410536096,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 729.3818181818182,
+    "traffic_rps": 13.073874747474747
+   }
+  },
+  {
+   "t_epoch": 1795601220.8064742,
+   "t_utc": "10:07:00",
+   "elapsed_s": 137.1,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.009818831711737343,
+    "p95_s": 0.19825833045160302,
+    "cost_usd_per_hour": 1.214298693968885,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 727.0727272727272,
+    "traffic_rps": 13.037104
+   }
+  },
+  {
+   "t_epoch": 1795601225.818723,
+   "t_utc": "10:07:05",
+   "elapsed_s": 142.1,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.0111731843575419,
+    "p95_s": 0.19798833819241984,
+    "cost_usd_per_hour": 1.2023386007786665,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 725.890909090909,
+    "traffic_rps": 13.018181818181818
+   }
+  },
+  {
+   "t_epoch": 1795601230.837595,
+   "t_utc": "10:07:10",
+   "elapsed_s": 147.1,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011283497884344146,
+    "p95_s": 0.19816371681415929,
+    "cost_usd_per_hour": 1.1856465186342897,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 717.1636363636363,
+    "traffic_rps": 12.89090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601235.8488624,
+   "t_utc": "10:07:15",
+   "elapsed_s": 152.1,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.012875536480686695,
+    "p95_s": 0.19850375939849624,
+    "cost_usd_per_hour": 1.1685219417869568,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 706.2363636363636,
+    "traffic_rps": 12.709090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601240.8587222,
+   "t_utc": "10:07:20",
+   "elapsed_s": 157.1,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.014409221902017292,
+    "p95_s": 0.19882800608828005,
+    "cost_usd_per_hour": 1.1570223296944673,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 699.8545454545455,
+    "traffic_rps": 12.618181818181817
+   }
+  },
+  {
+   "t_epoch": 1795601245.8735726,
+   "t_utc": "10:07:25",
+   "elapsed_s": 162.1,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015873015873015872,
+    "p95_s": 0.19868140243902438,
+    "cost_usd_per_hour": 1.1442161827071773,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 697.0,
+    "traffic_rps": 12.6
+   }
+  },
+  {
+   "t_epoch": 1795601250.8864996,
+   "t_utc": "10:07:30",
+   "elapsed_s": 167.2,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015827338129496403,
+    "p95_s": 0.19882039573820398,
+    "cost_usd_per_hour": 1.135439880198357,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 699.3636363636364,
+    "traffic_rps": 12.636363636363635
+   }
+  },
+  {
+   "t_epoch": 1795601255.8995914,
+   "t_utc": "10:07:35",
+   "elapsed_s": 172.2,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015965166908563137,
+    "p95_s": 0.19885560675883257,
+    "cost_usd_per_hour": 1.1199068954538822,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 694.0,
+    "traffic_rps": 12.527272727272726
+   }
+  },
+  {
+   "t_epoch": 1795601260.9154954,
+   "t_utc": "10:07:40",
+   "elapsed_s": 177.2,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.01601164483260553,
+    "p95_s": 0.19826186830015313,
+    "cost_usd_per_hour": 1.1072985149725643,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 691.6363636363636,
+    "traffic_rps": 12.49090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601265.9274828,
+   "t_utc": "10:07:45",
+   "elapsed_s": 182.2,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.017266187050359712,
+    "p95_s": 0.19837121212121214,
+    "cost_usd_per_hour": 1.0946831105485184,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 698.5818181818181,
+    "traffic_rps": 12.636363636363637
+   }
+  },
+  {
+   "t_epoch": 1795601270.9394763,
+   "t_utc": "10:07:50",
+   "elapsed_s": 187.2,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015873015873015876,
+    "p95_s": 0.19838391502276176,
+    "cost_usd_per_hour": 1.0781213153713303,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 696.8,
+    "traffic_rps": 12.6
+   }
+  },
+  {
+   "t_epoch": 1795601275.951584,
+   "t_utc": "10:07:55",
+   "elapsed_s": 192.2,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.016105417276720352,
+    "p95_s": 0.1987403400309119,
+    "cost_usd_per_hour": 1.0602338559009048,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 686.290909090909,
+    "traffic_rps": 12.418181818181818
+   }
+  },
+  {
+   "t_epoch": 1795601280.9646757,
+   "t_utc": "10:08:00",
+   "elapsed_s": 197.2,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.01759530791788856,
+    "p95_s": 0.19920560747663552,
+    "cost_usd_per_hour": 1.047603690467592,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 682.8909090909091,
+    "traffic_rps": 12.4
+   }
+  },
+  {
+   "t_epoch": 1795601285.976496,
+   "t_utc": "10:08:05",
+   "elapsed_s": 202.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.01744186046511628,
+    "p95_s": 0.19901386748844374,
+    "cost_usd_per_hour": 1.0350359921848868,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 690.4363636363636,
+    "traffic_rps": 12.50909090909091
+   }
+  },
+  {
+   "t_epoch": 1795601290.988572,
+   "t_utc": "10:08:10",
+   "elapsed_s": 207.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.017266187050359712,
+    "p95_s": 0.19882039573820398,
+    "cost_usd_per_hour": 1.021356333564471,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 698.090909090909,
+    "traffic_rps": 12.636363636363637
+   }
+  },
+  {
+   "t_epoch": 1795601296.0015695,
+   "t_utc": "10:08:16",
+   "elapsed_s": 212.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.017241379310344827,
+    "p95_s": 0.1985151515151515,
+    "cost_usd_per_hour": 1.0072052918455054,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 698.7090909090908,
+    "traffic_rps": 12.654545454545454
+   }
+  },
+  {
+   "t_epoch": 1795601301.0164378,
+   "t_utc": "10:08:21",
+   "elapsed_s": 217.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015691868758915838,
+    "p95_s": 0.1986390977443609,
+    "cost_usd_per_hour": 0.9969814226979257,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 705.7818181818182,
+    "traffic_rps": 12.745454545454544
+   }
+  },
+  {
+   "t_epoch": 1795601306.029968,
+   "t_utc": "10:08:26",
+   "elapsed_s": 222.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.01575931232091691,
+    "p95_s": 0.1988048411497731,
+    "cost_usd_per_hour": 0.9826696067403079,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 703.2727272727273,
+    "traffic_rps": 12.69090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601311.0444756,
+   "t_utc": "10:08:31",
+   "elapsed_s": 227.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015873015873015876,
+    "p95_s": 0.19883384146341462,
+    "cost_usd_per_hour": 0.9698551893542413,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 697.5272727272727,
+    "traffic_rps": 12.6
+   }
+  },
+  {
+   "t_epoch": 1795601316.0585196,
+   "t_utc": "10:08:36",
+   "elapsed_s": 232.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015873015873015876,
+    "p95_s": 0.1989847328244275,
+    "cost_usd_per_hour": 0.9569044653599483,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 697.6727272727272,
+    "traffic_rps": 12.6
+   }
+  },
+  {
+   "t_epoch": 1795601321.0715122,
+   "t_utc": "10:08:41",
+   "elapsed_s": 237.3,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.015918958031837915,
+    "p95_s": 0.19869266055045873,
+    "cost_usd_per_hour": 0.9438122098507262,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 695.8,
+    "traffic_rps": 12.563636363636363
+   }
+  },
+  {
+   "t_epoch": 1795601326.086698,
+   "t_utc": "10:08:46",
+   "elapsed_s": 242.4,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.016105417276720352,
+    "p95_s": 0.19889147286821707,
+    "cost_usd_per_hour": 0.9267002795620194,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 687.7272727272727,
+    "traffic_rps": 12.418181818181818
+   }
+  },
+  {
+   "t_epoch": 1795601331.0994377,
+   "t_utc": "10:08:51",
+   "elapsed_s": 247.4,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.01308139534883721,
+    "p95_s": 0.19856269113149846,
+    "cost_usd_per_hour": 0.9109534290492826,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 694.8545454545454,
+    "traffic_rps": 12.509090909090908
+   }
+  },
+  {
+   "t_epoch": 1795601336.1124337,
+   "t_utc": "10:08:56",
+   "elapsed_s": 252.4,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011577424023154849,
+    "p95_s": 0.19795317220543807,
+    "cost_usd_per_hour": 0.8872529491525468,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 698.6727272727272,
+    "traffic_rps": 12.563636363636363
+   }
+  },
+  {
+   "t_epoch": 1795601341.1246195,
+   "t_utc": "10:09:01",
+   "elapsed_s": 257.4,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.01149425287356322,
+    "p95_s": 0.19763826606875934,
+    "cost_usd_per_hour": 0.8717247457627159,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 702.6363636363636,
+    "traffic_rps": 12.654545454545453
+   }
+  },
+  {
+   "t_epoch": 1795601346.1365952,
+   "t_utc": "10:09:06",
+   "elapsed_s": 262.4,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011527377521613834,
+    "p95_s": 0.19808734939759037,
+    "cost_usd_per_hour": 0.8544136271186472,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 699.4,
+    "traffic_rps": 12.618181818181817
+   }
+  },
+  {
+   "t_epoch": 1795601351.1502092,
+   "t_utc": "10:09:11",
+   "elapsed_s": 267.4,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011594202898550725,
+    "p95_s": 0.19825493171471928,
+    "cost_usd_per_hour": 0.8371189830508501,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 695.9272727272727,
+    "traffic_rps": 12.545454545454545
+   }
+  },
+  {
+   "t_epoch": 1795601356.1633213,
+   "t_utc": "10:09:16",
+   "elapsed_s": 272.4,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.013062409288824383,
+    "p95_s": 0.19781060606060608,
+    "cost_usd_per_hour": 0.8225353220339007,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 693.0181818181818,
+    "traffic_rps": 12.527272727272727
+   }
+  },
+  {
+   "t_epoch": 1795601361.1765318,
+   "t_utc": "10:09:21",
+   "elapsed_s": 277.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011695906432748537,
+    "p95_s": 0.19753799392097265,
+    "cost_usd_per_hour": 0.8053761355932222,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 689.4181818181818,
+    "traffic_rps": 12.436363636363636
+   }
+  },
+  {
+   "t_epoch": 1795601366.1891792,
+   "t_utc": "10:09:26",
+   "elapsed_s": 282.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.013157894736842106,
+    "p95_s": 0.19753424657534246,
+    "cost_usd_per_hour": 0.7896960000000012,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 689.0181818181818,
+    "traffic_rps": 12.436363636363636
+   }
+  },
+  {
+   "t_epoch": 1795601371.2021701,
+   "t_utc": "10:09:31",
+   "elapsed_s": 287.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011644832605531296,
+    "p95_s": 0.19826981707317073,
+    "cost_usd_per_hour": 0.77451193220339,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 693.290909090909,
+    "traffic_rps": 12.49090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601376.2154744,
+   "t_utc": "10:09:36",
+   "elapsed_s": 292.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.010174418604651162,
+    "p95_s": 0.1985670731707317,
+    "cost_usd_per_hour": 0.7597122711864405,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 694.7818181818182,
+    "traffic_rps": 12.50909090909091
+   }
+  },
+  {
+   "t_epoch": 1795601381.2276835,
+   "t_utc": "10:09:41",
+   "elapsed_s": 297.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011477761836441894,
+    "p95_s": 0.19807634730538923,
+    "cost_usd_per_hour": 0.7453134915254227,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 703.5090909090909,
+    "traffic_rps": 12.672727272727272
+   }
+  },
+  {
+   "t_epoch": 1795601386.2445755,
+   "t_utc": "10:09:46",
+   "elapsed_s": 302.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011428571428571429,
+    "p95_s": 0.1982089552238806,
+    "cost_usd_per_hour": 0.7525463875136831,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 707.2727272727273,
+    "traffic_rps": 12.727272727272727
+   }
+  },
+  {
+   "t_epoch": 1795601391.2594612,
+   "t_utc": "10:09:51",
+   "elapsed_s": 307.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.010014306151645206,
+    "p95_s": 0.19851047904191618,
+    "cost_usd_per_hour": 0.7659412100937923,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 707.1090909090909,
+    "traffic_rps": 12.709090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601396.2716131,
+   "t_utc": "10:09:56",
+   "elapsed_s": 312.5,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.008708272859216257,
+    "p95_s": 0.19871580547112463,
+    "cost_usd_per_hour": 0.7774736949152538,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 698.7636363636364,
+    "traffic_rps": 12.527272727272726
+   }
+  },
+  {
+   "t_epoch": 1795601401.2844765,
+   "t_utc": "10:10:01",
+   "elapsed_s": 317.6,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.00723589001447178,
+    "p95_s": 0.1981127819548872,
+    "cost_usd_per_hour": 0.7781821016949151,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 702.2727272727273,
+    "traffic_rps": 12.563636363636364
+   }
+  },
+  {
+   "t_epoch": 1795601406.2976105,
+   "t_utc": "10:10:06",
+   "elapsed_s": 322.6,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.007122507122507123,
+    "p95_s": 0.1984992570579495,
+    "cost_usd_per_hour": 0.779646508474576,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 712.9272727272727,
+    "traffic_rps": 12.763636363636364
+   }
+  },
+  {
+   "t_epoch": 1795601411.3190541,
+   "t_utc": "10:10:11",
+   "elapsed_s": 327.6,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.008559201141226819,
+    "p95_s": 0.19864925373134326,
+    "cost_usd_per_hour": 0.7789381016949152,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 711.8181818181818,
+    "traffic_rps": 12.745454545454544
+   }
+  },
+  {
+   "t_epoch": 1795601416.3314373,
+   "t_utc": "10:10:16",
+   "elapsed_s": 332.6,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.011283497884344146,
+    "p95_s": 0.1988946587537092,
+    "cost_usd_per_hour": 0.7793993898305085,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 717.690909090909,
+    "traffic_rps": 12.89090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601421.3443613,
+   "t_utc": "10:10:21",
+   "elapsed_s": 337.6,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.00979020979020979,
+    "p95_s": 0.19871700879765397,
+    "cost_usd_per_hour": 0.7804208135593221,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": null,
+    "retrieval_hit_ratio_5m": null,
+    "tokens_per_s_1m": 724.1454545454545,
+    "traffic_rps": 13.0
+   }
+  }
+ ]
+}

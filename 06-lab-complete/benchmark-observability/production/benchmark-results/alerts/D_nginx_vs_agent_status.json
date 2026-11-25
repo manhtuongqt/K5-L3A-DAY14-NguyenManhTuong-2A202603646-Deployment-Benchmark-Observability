@@ -1,0 +1,26 @@
+{
+ "window_utc": [
+  "2026-11-25T10:01:47Z",
+  "2026-11-25T10:03:29Z"
+ ],
+ "window_s": 101,
+ "nginx_access_log_status_counts": {
+  "POST /ask -> 200": 1056,
+  "POST /ask -> 503": 9,
+  "POST /ask -> 504": 22
+ },
+ "nginx_error_log_upstream_timed_out_lines": 23,
+ "agent_side_metric_increase_http_requests_total_by_status_over_same_window": [
+  {
+   "status": "200",
+   "increase": 1043.33
+  },
+  {
+   "status": "503",
+   "increase": 9.09
+  }
+ ],
+ "agent_side_query": "sum by (status) (increase(http_requests_total{job=\"agent\", route=\"/ask\"}[101s]))",
+ "agent_side_error_rate_max_during_poll": 0.011296898533433348,
+ "note": "Nginx tra 504 cho request POST /ask toi instance bi pause (proxy_read_timeout 10s); instance bi pause khong xu ly xong request nen metric cua agent khong co status 504."
+}

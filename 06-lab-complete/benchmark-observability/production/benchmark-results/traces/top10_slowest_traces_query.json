@@ -1,0 +1,107 @@
+{
+ "query": "Jaeger v3 API: query.service_name=observable-agent, query.duration_min=1s, search_depth=1000, window 2h, taken 09:38Z",
+ "n_traces_ge_1s": 763,
+ "top10_by_root_duration": [
+  {
+   "trace_id": "63151d6f548d22e02f83c65b09281415",
+   "root_ms": 2984.226,
+   "start_utc": "09:33:53",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1778.81,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "7e63cfbc654ee8b3c094225a7b9a500b",
+   "root_ms": 2510.156,
+   "start_utc": "09:33:52",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1890.188,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "dc24317a67d346d576f66bff2587cdfe",
+   "root_ms": 2457.983,
+   "start_utc": "09:33:54",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1844.317,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "9fdefc097406298feb75822ee190cba9",
+   "root_ms": 2445.278,
+   "start_utc": "09:33:34",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1743.457,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "bcec511d1e66760d7b981c2fb330f51e",
+   "root_ms": 2434.707,
+   "start_utc": "09:33:55",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1744.729,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "4343c83dc5909988e64183fe3b924209",
+   "root_ms": 2424.081,
+   "start_utc": "09:33:35",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1800.717,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "93a6ed119c76a292461e6e1e70b9f44d",
+   "root_ms": 2415.695,
+   "start_utc": "09:33:36",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1801.908,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "e3a9b145f2880bdbd8f55e706a369b16",
+   "root_ms": 2297.131,
+   "start_utc": "09:33:00",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1801.998,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "1210adb6f77702dcf7f2d2c8e244b830",
+   "root_ms": 2269.253,
+   "start_utc": "09:33:00",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1768.778,
+   "status_code": [
+    "200"
+   ]
+  },
+  {
+   "trace_id": "0b5f3c6c77366fc29709fb3fdcf7b9fe",
+   "root_ms": 2202.325,
+   "start_utc": "09:33:33",
+   "slowest_child_span": "agent.run",
+   "slowest_child_ms": 1901.761,
+   "status_code": [
+    "200"
+   ]
+  }
+ ],
+ "note": "Tuong duong 'Longest First' trong Jaeger UI (UI cua Jaeger v2.23 khong con /api/traces v1, chi con /api/v3)."
+}

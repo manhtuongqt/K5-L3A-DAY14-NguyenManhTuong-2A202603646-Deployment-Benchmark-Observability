@@ -1,0 +1,8 @@
+# agent=1, truoc khi chay Locust, 2026-11-25T10:31:46Z
+k5-day14-observability-agent-1 usage_usec 2452666 user_usec 2227642 system_usec 225024 core_sched.force_idle_usec 0 nr_periods 120 nr_throttled 44 throttled_usec 2481142 nr_bursts 0 burst_usec 0 
+# Locust headless -u 100 -r 10 -t 45s, 2026-11-25T10:31:47Z
+POST     /ask                                                                                  210    220    230    260    690   1500   1700
+GET      /health                                                                                 8     12     19     27    120    640   1200
+         Aggregated                                                                            210    220    230    250    650   1500   1700
+# sau khi chay xong, 2026-11-25T10:32:33Z
+k5-day14-observability-agent-1 usage_usec 18560475 user_usec 17282880 system_usec 1277594 core_sched.force_idle_usec 0 nr_periods 576 nr_throttled 167 throttled_usec 14660731 nr_bursts 0 burst_usec 0 

@@ -26,6 +26,9 @@ RUN chown -R agent:agent /app
 USER agent
 
 ENV PATH=/home/agent/.local/bin:$PATH
+# Sửa lỗi có sẵn trong đề (CP8): user `agent` có home là /app (useradd -d /app), nên Python
+# mặc định tìm package --user ở /app/.local → không thấy uvicorn. Trỏ user site về đúng chỗ đã copy.
+ENV PYTHONUSERBASE=/home/agent/.local
 ENV PYTHONPATH=/app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1

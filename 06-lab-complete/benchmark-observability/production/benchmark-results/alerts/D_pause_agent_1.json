@@ -1,0 +1,527 @@
+{
+ "experiment": "D_pause_agent_1",
+ "description": "Thi nghiem D: docker pause k5-day14-observability-agent-1 (1 trong 2 agent), nen 20 user Locust",
+ "change_command": "docker pause k5-day14-observability-agent-1",
+ "t_change_utc": "2026-11-25T10:01:47Z",
+ "t_change_epoch": 1795600907.8448787,
+ "change_command_duration_s": 0.0,
+ "change_command_returncode": 0,
+ "poll_interval_s": 5,
+ "state_before_change": {
+  "t_epoch": 1795600907.8344998,
+  "t_utc": "10:01:47",
+  "elapsed_s": 0.0,
+  "alerts": [],
+  "metrics": {
+   "error_rate": 0.008849557522123894,
+   "p95_s": 0.2937890624999999,
+   "cost_usd_per_hour": 1.3330275254237298,
+   "instances_up": 2.0,
+   "retrieval_hit_rate_1m": 12.327272727272726,
+   "retrieval_hit_ratio_5m": 1.0,
+   "tokens_per_s_1m": 1480.7272727272727,
+   "traffic_rps": 12.327272727272726
+  }
+ },
+ "summary": {
+  "AgentInstanceDown": {
+   "first_seen_pending_or_firing_elapsed_s": 10.1,
+   "first_seen_firing_elapsed_s": 40.2,
+   "activeAt": "2026-11-25T10:01:57.401817116Z",
+   "activeAt_elapsed_s": 9.6
+  }
+ },
+ "expected_alerts": [
+  "AgentInstanceDown"
+ ],
+ "polls": [
+  {
+   "t_epoch": 1795600907.8697698,
+   "t_utc": "10:01:47",
+   "elapsed_s": 0.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.008849557522123894,
+    "p95_s": 0.2937890624999999,
+    "cost_usd_per_hour": 1.3330275254237298,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 12.327272727272726,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1480.7272727272727,
+    "traffic_rps": 12.327272727272726
+   }
+  },
+  {
+   "t_epoch": 1795600912.8815541,
+   "t_utc": "10:01:52",
+   "elapsed_s": 5.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.009432309333565876,
+    "p95_s": 0.2937290266285094,
+    "cost_usd_per_hour": 1.3058994485969933,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 11.383307636363636,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1371.9570250909092,
+    "traffic_rps": 11.43713693939394
+   }
+  },
+  {
+   "t_epoch": 1795600917.9015138,
+   "t_utc": "10:01:57",
+   "elapsed_s": 10.1,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.010415526318255292,
+    "p95_s": 0.2929357775765188,
+    "cost_usd_per_hour": 1.2781397970379749,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 10.372931313131312,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1245.258653198653,
+    "traffic_rps": 10.390797575757574
+   }
+  },
+  {
+   "t_epoch": 1795600922.9225655,
+   "t_utc": "10:02:02",
+   "elapsed_s": 15.1,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.011296898533433348,
+    "p95_s": 0.2923351470749651,
+    "cost_usd_per_hour": 1.258998947234306,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.709791666666668,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1152.6452136363637,
+    "traffic_rps": 9.618674242424243
+   }
+  },
+  {
+   "t_epoch": 1795600927.9441664,
+   "t_utc": "10:02:07",
+   "elapsed_s": 20.1,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00941575857646716,
+    "p95_s": 0.293920901565376,
+    "cost_usd_per_hour": 1.2576546770646804,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.682323073593073,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1162.876189090909,
+    "traffic_rps": 9.663973246753248
+   }
+  },
+  {
+   "t_epoch": 1795600932.9634883,
+   "t_utc": "10:02:12",
+   "elapsed_s": 25.1,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00562517695864674,
+    "p95_s": 0.29292525013409776,
+    "cost_usd_per_hour": 1.2583716749123186,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.78308282828283,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1182.0964204040406,
+    "traffic_rps": 9.80124005050505
+   }
+  },
+  {
+   "t_epoch": 1795600937.9847593,
+   "t_utc": "10:02:17",
+   "elapsed_s": 30.1,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005593887452959261,
+    "p95_s": 0.2921069242582136,
+    "cost_usd_per_hour": 1.2620090517199625,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.883713939393939,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1189.2371598181817,
+    "traffic_rps": 9.864683272727273
+   }
+  },
+  {
+   "t_epoch": 1795600943.009343,
+   "t_utc": "10:02:23",
+   "elapsed_s": 35.2,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.007566164904033248,
+    "p95_s": 0.293529981708803,
+    "cost_usd_per_hour": 1.284382301358623,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.725757575757575,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1171.656535681818,
+    "traffic_rps": 9.764212575757576
+   }
+  },
+  {
+   "t_epoch": 1795600948.0373912,
+   "t_utc": "10:02:28",
+   "elapsed_s": 40.2,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005831168515436161,
+    "p95_s": 0.2928639402779846,
+    "cost_usd_per_hour": 1.3091977504169516,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.700818181818182,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1165.2717338383839,
+    "traffic_rps": 9.70060707070707
+   }
+  },
+  {
+   "t_epoch": 1795600953.0572727,
+   "t_utc": "10:02:33",
+   "elapsed_s": 45.2,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005674656078010631,
+    "p95_s": 0.2944992743364937,
+    "cost_usd_per_hour": 1.3296984400411147,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.610796363636364,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1156.2406454545453,
+    "traffic_rps": 9.610576363636364
+   }
+  },
+  {
+   "t_epoch": 1795600958.080531,
+   "t_utc": "10:02:38",
+   "elapsed_s": 50.2,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0057220779128301195,
+    "p95_s": 0.29516712567066816,
+    "cost_usd_per_hour": 1.3337319034685389,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.56778606060606,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1147.8992739393939,
+    "traffic_rps": 9.531215757575758
+   }
+  },
+  {
+   "t_epoch": 1795600963.103539,
+   "t_utc": "10:02:43",
+   "elapsed_s": 55.3,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005964214711729623,
+    "p95_s": 0.2960277777777778,
+    "cost_usd_per_hour": 1.3361861533650696,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 9.163636363636364,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1101.418181818182,
+    "traffic_rps": 9.145454545454545
+   }
+  },
+  {
+   "t_epoch": 1795600968.1266387,
+   "t_utc": "10:02:48",
+   "elapsed_s": 60.3,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005494505494505494,
+    "p95_s": 0.29676923076923073,
+    "cost_usd_per_hour": 1.343369912902088,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 10.0,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1197.3454545454545,
+    "traffic_rps": 9.927272727272728
+   }
+  },
+  {
+   "t_epoch": 1795600973.149114,
+   "t_utc": "10:02:53",
+   "elapsed_s": 65.3,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00819672131147541,
+    "p95_s": 0.29575892857142855,
+    "cost_usd_per_hour": 1.350102234284476,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.145454545454545,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1338.6545454545453,
+    "traffic_rps": 11.090909090909092
+   }
+  },
+  {
+   "t_epoch": 1795600978.1706023,
+   "t_utc": "10:02:58",
+   "elapsed_s": 70.3,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.007680491551459294,
+    "p95_s": 0.2956938775510204,
+    "cost_usd_per_hour": 1.3573538056454937,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.763636363636364,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1430.9454545454546,
+    "traffic_rps": 11.836363636363636
+   }
+  },
+  {
+   "t_epoch": 1795600983.1941075,
+   "t_utc": "10:03:03",
+   "elapsed_s": 75.3,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.007656967840735069,
+    "p95_s": 0.29487854251012147,
+    "cost_usd_per_hour": 1.360697221576909,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.854545454545454,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1430.9272727272728,
+    "traffic_rps": 11.872727272727273
+   }
+  },
+  {
+   "t_epoch": 1795600988.2185972,
+   "t_utc": "10:03:08",
+   "elapsed_s": 80.4,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009259259259259259,
+    "p95_s": 0.29568464730290456,
+    "cost_usd_per_hour": 1.3673528801756423,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.836363636363636,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1418.9818181818182,
+    "traffic_rps": 11.781818181818181
+   }
+  },
+  {
+   "t_epoch": 1795600993.238394,
+   "t_utc": "10:03:13",
+   "elapsed_s": 85.4,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0077760497667185065,
+    "p95_s": 0.29745867768595036,
+    "cost_usd_per_hour": 1.376936370368285,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.727272727272727,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1410.3636363636363,
+    "traffic_rps": 11.690909090909091
+   }
+  },
+  {
+   "t_epoch": 1795600998.2665536,
+   "t_utc": "10:03:18",
+   "elapsed_s": 90.4,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.007692307692307693,
+    "p95_s": 0.29771784232365145,
+    "cost_usd_per_hour": 1.3818633867100578,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.818181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1423.9454545454546,
+    "traffic_rps": 11.818181818181818
+   }
+  },
+  {
+   "t_epoch": 1795601003.2873557,
+   "t_utc": "10:03:23",
+   "elapsed_s": 95.4,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009244992295839754,
+    "p95_s": 0.2973125,
+    "cost_usd_per_hour": 1.3812406910885964,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.781818181818181,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1419.9454545454546,
+    "traffic_rps": 11.799999999999999
+   }
+  },
+  {
+   "t_epoch": 1795601008.3079467,
+   "t_utc": "10:03:28",
+   "elapsed_s": 100.5,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "firing",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:01:57.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00911854103343465,
+    "p95_s": 0.29613281249999995,
+    "cost_usd_per_hour": 1.3869248118562987,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.98181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1443.8545454545454,
+    "traffic_rps": 11.963636363636363
+   }
+  }
+ ]
+}

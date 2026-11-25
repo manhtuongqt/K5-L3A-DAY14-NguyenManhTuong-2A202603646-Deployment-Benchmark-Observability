@@ -1,0 +1,823 @@
+{
+ "experiment": "C_model_large",
+ "description": "Thi nghiem C: LLM_MODEL=mock-llm-large (default mock-llm-small), nen 20 user Locust, 2 agent",
+ "change_command": "python3 /tmp/claude-1000/cp8/setenv.py LLM_MODEL=mock-llm-large && docker compose -p k5-day14-observability up -d --scale agent=2",
+ "t_change_utc": "2026-11-25T10:17:40Z",
+ "t_change_epoch": 1795601860.4492083,
+ "change_command_duration_s": 2.7,
+ "change_command_returncode": 0,
+ "poll_interval_s": 5,
+ "state_before_change": {
+  "t_epoch": 1795601860.440094,
+  "t_utc": "10:17:40",
+  "elapsed_s": 0.0,
+  "alerts": [],
+  "metrics": {
+   "error_rate": 0.011627906976744186,
+   "p95_s": 0.29732217573221753,
+   "cost_usd_per_hour": 1.6583821016949383,
+   "instances_up": 2.0,
+   "retrieval_hit_rate_1m": 12.49090909090909,
+   "retrieval_hit_ratio_5m": 1.0,
+   "tokens_per_s_1m": 1507.581818181818,
+   "traffic_rps": 12.509090909090908
+  }
+ },
+ "summary": {
+  "AgentHighLatencyP95": {
+   "first_seen_pending_or_firing_elapsed_s": 133.2,
+   "first_seen_firing_elapsed_s": null,
+   "activeAt": "2026-11-25T10:19:52.401817116Z",
+   "activeAt_elapsed_s": 132.0
+  },
+  "AgentInstanceDown": {
+   "first_seen_pending_or_firing_elapsed_s": 7.7,
+   "first_seen_firing_elapsed_s": null,
+   "activeAt": "2026-11-25T10:17:47.401817116Z",
+   "activeAt_elapsed_s": 7.0
+  },
+  "LLMCostBurnRateHigh": {
+   "first_seen_pending_or_firing_elapsed_s": 22.8,
+   "first_seen_firing_elapsed_s": 143.3,
+   "activeAt": "2026-11-25T10:18:02.571501534Z",
+   "activeAt_elapsed_s": 22.1
+  }
+ },
+ "expected_alerts": [
+  "LLMCostBurnRateHigh"
+ ],
+ "polls": [
+  {
+   "t_epoch": 1795601863.145509,
+   "t_utc": "10:17:43",
+   "elapsed_s": 2.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.012601390498261878,
+    "p95_s": 0.2976748104465038,
+    "cost_usd_per_hour": 1.6578711689070953,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 12.514545454545454,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1510.5581818181818,
+    "traffic_rps": 12.552727272727273
+   }
+  },
+  {
+   "t_epoch": 1795601868.1574345,
+   "t_utc": "10:17:48",
+   "elapsed_s": 7.7,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T10:17:47.401817116Z",
+     "value": "0e+00"
+    },
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.8:8000",
+     "activeAt": "2026-11-25T10:17:47.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.013835602747640131,
+    "p95_s": 0.2964735637563661,
+    "cost_usd_per_hour": 1.6161403203574096,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.022405555555554,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1324.1859685185184,
+    "traffic_rps": 11.021985925925925
+   }
+  },
+  {
+   "t_epoch": 1795601873.1678843,
+   "t_utc": "10:17:53",
+   "elapsed_s": 12.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.01581359351397323,
+    "p95_s": 0.2993434857361632,
+    "cost_usd_per_hour": 1.5872008841517522,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.781210505050506,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1206.8331193055556,
+    "traffic_rps": 9.790635555555555
+   }
+  },
+  {
+   "t_epoch": 1795601878.190251,
+   "t_utc": "10:17:58",
+   "elapsed_s": 17.7,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.014646403728655293,
+    "p95_s": 0.46574999999999944,
+    "cost_usd_per_hour": 1.8129466668524252,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.436363636363637,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1140.0933157142858,
+    "traffic_rps": 9.41051227272727
+   }
+  },
+  {
+   "t_epoch": 1795601883.2160418,
+   "t_utc": "10:18:03",
+   "elapsed_s": 22.8,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "2.416154273323659e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.015060266784701863,
+    "p95_s": 0.5062499999999992,
+    "cost_usd_per_hour": 2.4828392540775983,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.381818181818183,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1214.6296533333334,
+    "traffic_rps": 9.377546969696969
+   }
+  },
+  {
+   "t_epoch": 1795601888.2396662,
+   "t_utc": "10:18:08",
+   "elapsed_s": 27.8,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "2.752996906826689e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.015675844685228573,
+    "p95_s": 0.5789473684210519,
+    "cost_usd_per_hour": 2.810920575764676,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.127272727272727,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1174.5500893333335,
+    "traffic_rps": 9.106359999999999
+   }
+  },
+  {
+   "t_epoch": 1795601893.2575479,
+   "t_utc": "10:18:13",
+   "elapsed_s": 32.8,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "3.158989535486059e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.016588216380054113,
+    "p95_s": 0.6181249999999989,
+    "cost_usd_per_hour": 3.2458763188799344,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.98181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1158.6890333333333,
+    "traffic_rps": 8.948401136363636
+   }
+  },
+  {
+   "t_epoch": 1795601898.2771,
+   "t_utc": "10:18:18",
+   "elapsed_s": 37.8,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "3.613356176921559e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.016020816440976478,
+    "p95_s": 0.6451923076923077,
+    "cost_usd_per_hour": 3.6326240953990254,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.8,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1137.863255388889,
+    "traffic_rps": 8.721483333333333
+   }
+  },
+  {
+   "t_epoch": 1795601903.29856,
+   "t_utc": "10:18:23",
+   "elapsed_s": 42.8,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "3.9388996483976673e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.010638297872340427,
+    "p95_s": 0.6464285714285715,
+    "cost_usd_per_hour": 3.9927645830494316,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.636363636363637,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1128.1044322222224,
+    "traffic_rps": 8.545454545454545
+   }
+  },
+  {
+   "t_epoch": 1795601908.321042,
+   "t_utc": "10:18:28",
+   "elapsed_s": 47.9,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "4.325918777951219e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.008583690987124463,
+    "p95_s": 0.6589285714285715,
+    "cost_usd_per_hour": 4.378430237759593,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.581818181818182,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1128.3501205555556,
+    "traffic_rps": 8.472727272727273
+   }
+  },
+  {
+   "t_epoch": 1795601913.3425794,
+   "t_utc": "10:18:33",
+   "elapsed_s": 52.9,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "4.702987322941242e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0065075921908893716,
+    "p95_s": 0.675265957446808,
+    "cost_usd_per_hour": 4.766422240595528,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.509090909090908,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1025.7766,
+    "traffic_rps": 8.381818181818181
+   }
+  },
+  {
+   "t_epoch": 1795601918.3625598,
+   "t_utc": "10:18:38",
+   "elapsed_s": 57.9,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "5.086529209305017e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00429778902631202,
+    "p95_s": 0.6805563816824184,
+    "cost_usd_per_hour": 5.1675284184675165,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.496599326599327,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1040.656574722222,
+    "traffic_rps": 8.462028619528619
+   }
+  },
+  {
+   "t_epoch": 1795601923.384578,
+   "t_utc": "10:18:43",
+   "elapsed_s": 62.9,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "5.500108417981861e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0021389643634906383,
+    "p95_s": 0.6911884771801898,
+    "cost_usd_per_hour": 5.5379561688677805,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.516253185185185,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1147.4011666666668,
+    "traffic_rps": 9.387931428571429
+   }
+  },
+  {
+   "t_epoch": 1795601928.4057453,
+   "t_utc": "10:18:48",
+   "elapsed_s": 68.0,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "5.831991057743492e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0019176001026440458,
+    "p95_s": 0.691735040533725,
+    "cost_usd_per_hour": 5.902253435071003,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.387197151515151,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1253.7015066666665,
+    "traffic_rps": 10.253586098484849
+   }
+  },
+  {
+   "t_epoch": 1795601933.4255414,
+   "t_utc": "10:18:53",
+   "elapsed_s": 73.0,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "6.206302465220376e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.003549678859435725,
+    "p95_s": 0.6863095238095236,
+    "cost_usd_per_hour": 6.291178218836377,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.927272727272726,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1329.7454545454545,
+    "traffic_rps": 10.893223973063973
+   }
+  },
+  {
+   "t_epoch": 1795601938.4522262,
+   "t_utc": "10:18:58",
+   "elapsed_s": 78.0,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "6.632378529332739e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005478997177486303,
+    "p95_s": 0.6813559322033899,
+    "cost_usd_per_hour": 6.692714594721143,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 11.018181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1332.8363636363636,
+    "traffic_rps": 10.95090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601943.474453,
+   "t_utc": "10:19:03",
+   "elapsed_s": 83.0,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "6.997857510024913e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006578947368421052,
+    "p95_s": 0.6757211538461529,
+    "cost_usd_per_hour": 7.074126699583821,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 11.036363636363635,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1342.0363636363636,
+    "traffic_rps": 11.054545454545455
+   }
+  },
+  {
+   "t_epoch": 1795601948.4898214,
+   "t_utc": "10:19:08",
+   "elapsed_s": 88.0,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "7.37188843032001e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006700167504187605,
+    "p95_s": 0.6822727272727267,
+    "cost_usd_per_hour": 7.403193075580361,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.854545454545455,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1314.5272727272727,
+    "traffic_rps": 10.854545454545454
+   }
+  },
+  {
+   "t_epoch": 1795601953.5155838,
+   "t_utc": "10:19:13",
+   "elapsed_s": 93.1,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "7.682649273893672e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006779661016949152,
+    "p95_s": 0.6992788461538463,
+    "cost_usd_per_hour": 7.716456010097992,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.8,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1296.3636363636363,
+    "traffic_rps": 10.727272727272727
+   }
+  },
+  {
+   "t_epoch": 1795601958.5366857,
+   "t_utc": "10:19:18",
+   "elapsed_s": 98.1,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "8.03914933475102e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006791171477079796,
+    "p95_s": 0.7127500000000002,
+    "cost_usd_per_hour": 8.088350864044914,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.727272727272727,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1297.2181818181818,
+    "traffic_rps": 10.709090909090909
+   }
+  },
+  {
+   "t_epoch": 1795601963.5616016,
+   "t_utc": "10:19:23",
+   "elapsed_s": 103.1,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "8.37003337803315e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006837606837606837,
+    "p95_s": 0.7174479166666663,
+    "cost_usd_per_hour": 8.447353975232001,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.690909090909091,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1288.6545454545453,
+    "traffic_rps": 10.636363636363637
+   }
+  },
+  {
+   "t_epoch": 1795601968.5773735,
+   "t_utc": "10:19:28",
+   "elapsed_s": 108.1,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "8.773418846061787e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006825938566552901,
+    "p95_s": 0.7240196078431369,
+    "cost_usd_per_hour": 8.854756480240889,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.636363636363637,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1294.509090909091,
+    "traffic_rps": 10.654545454545454
+   }
+  },
+  {
+   "t_epoch": 1795601973.5965645,
+   "t_utc": "10:19:33",
+   "elapsed_s": 113.1,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "9.123998196499839e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0068846815834767644,
+    "p95_s": 0.7446428571428565,
+    "cost_usd_per_hour": 9.198175831290769,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.618181818181817,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1278.8545454545454,
+    "traffic_rps": 10.563636363636363
+   }
+  },
+  {
+   "t_epoch": 1795601978.6256964,
+   "t_utc": "10:19:38",
+   "elapsed_s": 118.2,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "9.475707781530046e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0069084628670120895,
+    "p95_s": 0.732848837209302,
+    "cost_usd_per_hour": 9.557543866314907,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.49090909090909,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1276.6545454545453,
+    "traffic_rps": 10.527272727272727
+   }
+  },
+  {
+   "t_epoch": 1795601983.6456575,
+   "t_utc": "10:19:43",
+   "elapsed_s": 123.2,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "9.839225085306339e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006896551724137931,
+    "p95_s": 0.7393617021276594,
+    "cost_usd_per_hour": 9.937473295790463,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.527272727272727,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1280.8,
+    "traffic_rps": 10.545454545454545
+   }
+  },
+  {
+   "t_epoch": 1795601988.6604445,
+   "t_utc": "10:19:48",
+   "elapsed_s": 128.2,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "1.0236602284697387e+01"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005226480836236934,
+    "p95_s": 0.7463541666666669,
+    "cost_usd_per_hour": 10.287957994848941,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.509090909090908,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1269.290909090909,
+    "traffic_rps": 10.436363636363636
+   }
+  },
+  {
+   "t_epoch": 1795601993.6822248,
+   "t_utc": "10:19:53",
+   "elapsed_s": 133.2,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:19:52.401817116Z",
+     "value": "1.5101851851851849e+00"
+    },
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "1.057710273662378e+01"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005253940455341506,
+    "p95_s": 0.7474537037037042,
+    "cost_usd_per_hour": 10.674274154481214,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.436363636363637,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1264.4181818181817,
+    "traffic_rps": 10.381818181818181
+   }
+  },
+  {
+   "t_epoch": 1795601998.7035344,
+   "t_utc": "10:19:58",
+   "elapsed_s": 138.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:19:52.401817116Z",
+     "value": "1.525892857142858e+00"
+    },
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "1.0958855205750073e+01"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00530035335689046,
+    "p95_s": 1.5129629629629637,
+    "cost_usd_per_hour": 11.025306526972575,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.363636363636363,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1255.3454545454545,
+    "traffic_rps": 10.29090909090909
+   }
+  },
+  {
+   "t_epoch": 1795602003.7227292,
+   "t_utc": "10:20:03",
+   "elapsed_s": 143.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T10:19:52.401817116Z",
+     "value": "1.5125e+00"
+    },
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "1.130377534580911e+01"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005235602094240837,
+    "p95_s": 0.7415247018739353,
+    "cost_usd_per_hour": 11.405061884092694,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.363636363636363,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1271.2545454545455,
+    "traffic_rps": 10.454545454545455
+   }
+  },
+  {
+   "t_epoch": 1795602008.745094,
+   "t_utc": "10:20:08",
+   "elapsed_s": 148.3,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "1.1669604303385006e+01"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.008635578583765112,
+    "p95_s": 0.7275,
+    "cost_usd_per_hour": 11.769719729670433,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.509090909090908,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1277.8727272727272,
+    "traffic_rps": 10.527272727272727
+   }
+  },
+  {
+   "t_epoch": 1795602013.772496,
+   "t_utc": "10:20:13",
+   "elapsed_s": 153.3,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "1.2052111400646526e+01"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009075342465753426,
+    "p95_s": 0.7076923076923076,
+    "cost_usd_per_hour": 12.143332472487709,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.578181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1289.1981818181819,
+    "traffic_rps": 10.618181818181817
+   }
+  },
+  {
+   "t_epoch": 1795602018.790327,
+   "t_utc": "10:20:18",
+   "elapsed_s": 158.3,
+   "alerts": [
+    {
+     "name": "LLMCostBurnRateHigh",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T10:18:02.571501534Z",
+     "value": "1.242797340567438e+01"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.012027491408934707,
+    "p95_s": 0.7023584905660377,
+    "cost_usd_per_hour": 12.512764598022626,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.6,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1280.0727272727272,
+    "traffic_rps": 10.581818181818182
+   }
+  }
+ ]
+}

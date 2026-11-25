@@ -1,0 +1,96 @@
+{
+ "evaluated_at_utc": "2026-11-25T09:34:34Z",
+ "evaluated_epoch": 1795599274.0,
+ "queries": {
+  "agent_cpu_cores_avg_by_instance": {
+   "promql": "avg_over_time(rate(process_cpu_seconds_total{job=\"agent\"}[30s])[100s:5s])",
+   "result": [
+    {
+     "metric": {
+      "instance": "172.18.0.4:8000",
+      "job": "agent"
+     },
+     "value": [
+      1795599274,
+      "0.3251"
+     ]
+    }
+   ]
+  },
+  "agent_cpu_cores_max_by_instance": {
+   "promql": "max_over_time(rate(process_cpu_seconds_total{job=\"agent\"}[30s])[100s:5s])",
+   "result": [
+    {
+     "metric": {
+      "instance": "172.18.0.4:8000",
+      "job": "agent"
+     },
+     "value": [
+      1795599274,
+      "0.3771999999999997"
+     ]
+    }
+   ]
+  },
+  "server_side_ask_p95_s_last_110s": {
+   "promql": "histogram_quantile(0.95, sum by (le) (increase(http_request_duration_seconds_bucket{job=\"agent\", route=\"/ask\"}[110s])))",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795599274,
+      "0.980172413793102"
+     ]
+    }
+   ]
+  },
+  "server_side_ask_avg_s_last_110s": {
+   "promql": "sum(increase(http_request_duration_seconds_sum{job=\"agent\", route=\"/ask\"}[110s])) / sum(increase(http_request_duration_seconds_count{job=\"agent\", route=\"/ask\"}[110s]))",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795599274,
+      "0.2953953221000878"
+     ]
+    }
+   ]
+  },
+  "llm_p95_s_last_110s": {
+   "promql": "histogram_quantile(0.95, sum by (le) (increase(llm_request_duration_seconds_bucket{job=\"agent\"}[110s])))",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795599274,
+      "0.19792383081155432"
+     ]
+    }
+   ]
+  },
+  "llm_avg_s_last_110s": {
+   "promql": "sum(increase(llm_request_duration_seconds_sum{job=\"agent\"}[110s])) / sum(increase(llm_request_duration_seconds_count{job=\"agent\"}[110s]))",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795599274,
+      "0.21051920897280063"
+     ]
+    }
+   ]
+  },
+  "in_flight_avg": {
+   "promql": "avg_over_time(sum(agent_in_flight_requests{job=\"agent\"})[100s:5s])",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795599274,
+      "17.7"
+     ]
+    }
+   ]
+  }
+ }
+}

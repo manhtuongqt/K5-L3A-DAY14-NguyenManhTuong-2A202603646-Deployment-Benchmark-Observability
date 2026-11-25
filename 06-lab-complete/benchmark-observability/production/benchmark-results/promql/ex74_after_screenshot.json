@@ -1,0 +1,215 @@
+{
+ "captured_at_utc": "2026-11-25T09:48:22Z",
+ "captured_epoch": 1795600102.4650571,
+ "queries": {
+  "p95_s": {
+   "promql": "histogram_quantile(0.95, sum by (le) (rate(http_request_duration_seconds_bucket{job=\"agent\", route=\"/ask\"}[1m])))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.467,
+      "0.2946036585365853"
+     ]
+    }
+   ]
+  },
+  "p50_s": {
+   "promql": "histogram_quantile(0.50, sum by (le) (rate(http_request_duration_seconds_bucket{job=\"agent\", route=\"/ask\"}[1m])))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.468,
+      "0.17757296466973888"
+     ]
+    }
+   ]
+  },
+  "p99_s": {
+   "promql": "histogram_quantile(0.99, sum by (le) (rate(http_request_duration_seconds_bucket{job=\"agent\", route=\"/ask\"}[1m])))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.469,
+      "1.8415625000000013"
+     ]
+    }
+   ]
+  },
+  "avg_s": {
+   "promql": "sum(rate(http_request_duration_seconds_sum{job=\"agent\", route=\"/ask\"}[1m])) / sum(rate(http_request_duration_seconds_count{job=\"agent\", route=\"/ask\"}[1m]))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.47,
+      "0.23756278905130845"
+     ]
+    }
+   ]
+  },
+  "error_rate": {
+   "promql": "(sum(rate(http_requests_total{job=\"agent\", route=\"/ask\", status=~\"5..\"}[1m])) or vector(0)) / clamp_min(sum(rate(http_requests_total{job=\"agent\", route=\"/ask\"}[1m])), 1e-9)",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.471,
+      "0.01282051282051282"
+     ]
+    }
+   ]
+  },
+  "traffic_rps": {
+   "promql": "sum(rate(http_requests_total{job=\"agent\", route=\"/ask\"}[1m]))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.471,
+      "18.436363636363637"
+     ]
+    }
+   ]
+  },
+  "rps_by_instance": {
+   "promql": "sum by (instance) (rate(http_requests_total{route=\"/ask\"}[1m]))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {
+      "instance": "172.18.0.4:8000"
+     },
+     "value": [
+      1795600102.472,
+      "9.218181818181819"
+     ]
+    },
+    {
+     "metric": {
+      "instance": "172.18.0.8:8000"
+     },
+     "value": [
+      1795600102.472,
+      "9.218181818181817"
+     ]
+    }
+   ]
+  },
+  "tokens_per_s_by_type": {
+   "promql": "sum by (type) (rate(llm_tokens_total[1m]))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {
+      "type": "input"
+     },
+     "value": [
+      1795600102.473,
+      "1442.0181818181818"
+     ]
+    },
+    {
+     "metric": {
+      "type": "output"
+     },
+     "value": [
+      1795600102.473,
+      "768.5999999999999"
+     ]
+    }
+   ]
+  },
+  "llm_p95_by_model_s": {
+   "promql": "histogram_quantile(0.95, sum by (le, model) (rate(llm_request_duration_seconds_bucket{job=\"agent\"}[1m])))",
+   "status": "success",
+   "result": [
+    {
+     "metric": {
+      "model": "mock-llm-small"
+     },
+     "value": [
+      1795600102.473,
+      "0.1981372549019608"
+     ]
+    }
+   ]
+  },
+  "cost_usd_per_hour": {
+   "promql": "sum(rate(llm_cost_usd_total{job=\"agent\"}[5m])) * 3600",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.474,
+      "2.4639046779667617"
+     ]
+    }
+   ]
+  },
+  "retrieval_hit_ratio": {
+   "promql": "sum(rate(agent_retrieval_total{job=\"agent\", result=\"hit\"}[5m])) / clamp_min(sum(rate(agent_retrieval_total{job=\"agent\"}[5m])), 1e-9)",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.475,
+      "1"
+     ]
+    }
+   ]
+  },
+  "in_flight": {
+   "promql": "sum(agent_in_flight_requests{job=\"agent\"})",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.476,
+      "4"
+     ]
+    }
+   ]
+  },
+  "instances_up": {
+   "promql": "sum(up{job=\"agent\"})",
+   "status": "success",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795600102.476,
+      "2"
+     ]
+    }
+   ]
+  },
+  "agent_info": {
+   "promql": "sum by (version, model) (agent_info{job=\"agent\"})",
+   "status": "success",
+   "result": [
+    {
+     "metric": {
+      "model": "mock-llm-small",
+      "version": "v2"
+     },
+     "value": [
+      1795600102.477,
+      "2"
+     ]
+    }
+   ]
+  }
+ }
+}

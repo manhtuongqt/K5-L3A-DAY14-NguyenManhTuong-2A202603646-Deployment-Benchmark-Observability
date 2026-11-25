@@ -1,0 +1,56 @@
+{
+ "evaluated_at_utc": "2026-11-25T10:04:33Z",
+ "evaluated_epoch": 1795601073.726059,
+ "queries": {
+  "per_ok_call_usd": {
+   "promql": "sum(rate(llm_cost_usd_total{job=\"agent\"}[1m])) / sum(rate(llm_requests_total{job=\"agent\", status=\"ok\"}[1m]))",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795601073.726,
+      "0.000037330898878603607"
+     ]
+    }
+   ]
+  },
+  "input_tokens_per_ok_call": {
+   "promql": "sum(rate(llm_tokens_total{job=\"agent\", type=\"input\"}[1m])) / sum(rate(llm_requests_total{job=\"agent\", status=\"ok\"}[1m]))",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795601073.726,
+      "79.33694429799229"
+     ]
+    }
+   ]
+  },
+  "output_tokens_per_ok_call": {
+   "promql": "sum(rate(llm_tokens_total{job=\"agent\", type=\"output\"}[1m])) / sum(rate(llm_requests_total{job=\"agent\", status=\"ok\"}[1m]))",
+   "result": [
+    {
+     "metric": {},
+     "value": [
+      1795601073.726,
+      "42.38392872317309"
+     ]
+    }
+   ]
+  },
+  "ok_calls_per_s_by_model": {
+   "promql": "sum by (model) (rate(llm_requests_total{job=\"agent\", status=\"ok\"}[1m]))",
+   "result": [
+    {
+     "metric": {
+      "model": "mock-llm-small"
+     },
+     "value": [
+      1795601073.726,
+      "12.82105298084249"
+     ]
+    }
+   ]
+  }
+ }
+}

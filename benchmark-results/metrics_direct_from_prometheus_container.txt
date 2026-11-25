@@ -1,0 +1,9 @@
+  HTTP/1.1 200 OK
+http_requests_total{method="GET",route="/health",status="200"} 306.0
+http_requests_total{method="POST",route="/ask",status="200"} 2826.0
+http_requests_total{method="POST",route="/ask",status="503"} 27.0
+llm_tokens_total{model="mock-llm-small",type="input"} 224159.0
+llm_tokens_total{model="mock-llm-small",type="output"} 119754.0
+agent_question_length_chars_count 2854.0
+agent_question_length_chars_sum 123556.0
+agent_info{model="mock-llm-small",version="v2"} 1.0

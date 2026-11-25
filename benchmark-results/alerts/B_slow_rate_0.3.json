@@ -1,0 +1,812 @@
+{
+ "experiment": "B_slow_rate_0.3",
+ "description": "Thi nghiem B: MOCK_SLOW_RATE=0.3 (default 0.03), nen 20 user Locust, 2 agent",
+ "change_command": "python3 /tmp/claude-1000/cp8/setenv.py MOCK_SLOW_RATE=0.3 && docker compose -p k5-day14-observability up -d --scale agent=2",
+ "t_change_utc": "2026-11-25T09:57:21Z",
+ "t_change_epoch": 1795600641.54825,
+ "change_command_duration_s": 2.0,
+ "change_command_returncode": 0,
+ "poll_interval_s": 5,
+ "state_before_change": {
+  "t_epoch": 1795600641.538149,
+  "t_utc": "09:57:21",
+  "elapsed_s": 0.0,
+  "alerts": [],
+  "metrics": {
+   "error_rate": 0.0042796005706134095,
+   "p95_s": 0.28967811158798284,
+   "cost_usd_per_hour": 1.4099967457627185,
+   "instances_up": 2.0,
+   "retrieval_hit_rate_1m": 12.799999999999999,
+   "retrieval_hit_ratio_5m": 1.0,
+   "tokens_per_s_1m": 1543.9636363636364,
+   "traffic_rps": 12.745454545454544
+  }
+ },
+ "summary": {
+  "AgentHighLatencyP95": {
+   "first_seen_pending_or_firing_elapsed_s": 27.0,
+   "first_seen_firing_elapsed_s": 147.5,
+   "activeAt": "2026-11-25T09:57:47.401817116Z",
+   "activeAt_elapsed_s": 25.9
+  },
+  "AgentInstanceDown": {
+   "first_seen_pending_or_firing_elapsed_s": 7.0,
+   "first_seen_firing_elapsed_s": null,
+   "activeAt": "2026-11-25T09:57:27.401817116Z",
+   "activeAt_elapsed_s": 5.9
+  }
+ },
+ "expected_alerts": [
+  "AgentHighLatencyP95"
+ ],
+ "polls": [
+  {
+   "t_epoch": 1795600643.5048857,
+   "t_utc": "09:57:23",
+   "elapsed_s": 2.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.0045301720299845555,
+    "p95_s": 0.289779699562817,
+    "cost_usd_per_hour": 1.4080855055523154,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 12.387313363636363,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1493.331368151515,
+    "traffic_rps": 12.349930545454546
+   }
+  },
+  {
+   "t_epoch": 1795600648.5194376,
+   "t_utc": "09:57:28",
+   "elapsed_s": 7.0,
+   "alerts": [
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.8:8000",
+     "activeAt": "2026-11-25T09:57:27.401817116Z",
+     "value": "0e+00"
+    },
+    {
+     "name": "AgentInstanceDown",
+     "state": "pending",
+     "instance": "172.18.0.4:8000",
+     "activeAt": "2026-11-25T09:57:27.401817116Z",
+     "value": "0e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.005031746584678369,
+    "p95_s": 0.29020487690025043,
+    "cost_usd_per_hour": 1.366238632323071,
+    "instances_up": 1.0,
+    "retrieval_hit_rate_1m": 11.110369259259258,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1340.6902946666664,
+    "traffic_rps": 11.09216337037037
+   }
+  },
+  {
+   "t_epoch": 1795600653.5334718,
+   "t_utc": "09:57:33",
+   "elapsed_s": 12.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.0058103387309175044,
+    "p95_s": 0.2892906055020445,
+    "cost_usd_per_hour": 1.3345059605451233,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.760698316498315,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1177.7922091919193,
+    "traffic_rps": 9.726608358585858
+   }
+  },
+  {
+   "t_epoch": 1795600658.5465953,
+   "t_utc": "09:57:38",
+   "elapsed_s": 17.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.004053965053028041,
+    "p95_s": 0.29049079754601226,
+    "cost_usd_per_hour": 1.3231592542372943,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.436363636363637,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1124.4181818181817,
+    "traffic_rps": 9.273948338744589
+   }
+  },
+  {
+   "t_epoch": 1795600663.5695424,
+   "t_utc": "09:57:43",
+   "elapsed_s": 22.0,
+   "alerts": [],
+   "metrics": {
+    "error_rate": 0.004165691593964278,
+    "p95_s": 1.5927419354838703,
+    "cost_usd_per_hour": 1.321154847457633,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.236363636363635,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1109.8545454545454,
+    "traffic_rps": 9.183699704184704
+   }
+  },
+  {
+   "t_epoch": 1795600668.5905278,
+   "t_utc": "09:57:48",
+   "elapsed_s": 27.0,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.6814102564102547e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0023564408733480306,
+    "p95_s": 1.7494897959183668,
+    "cost_usd_per_hour": 1.3166170169491582,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.0,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1077.1272727272726,
+    "traffic_rps": 8.930128242424242
+   }
+  },
+  {
+   "t_epoch": 1795600673.6095734,
+   "t_utc": "09:57:53",
+   "elapsed_s": 32.1,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.7745283018867921e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.004273504273504273,
+    "p95_s": 1.7982758620689652,
+    "cost_usd_per_hour": 1.3068530847457684,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.618181818181817,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1022.690909090909,
+    "traffic_rps": 8.50909090909091
+   }
+  },
+  {
+   "t_epoch": 1795600678.6360955,
+   "t_utc": "09:57:58",
+   "elapsed_s": 37.1,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.8326086956521739e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.006550218340611354,
+    "p95_s": 1.8512987012987012,
+    "cost_usd_per_hour": 1.3001955254237343,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.418181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 997.3818181818181,
+    "traffic_rps": 8.327272727272726
+   }
+  },
+  {
+   "t_epoch": 1795600683.6564581,
+   "t_utc": "09:58:03",
+   "elapsed_s": 42.1,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.8666666666666667e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009070294784580499,
+    "p95_s": 1.8801630434782606,
+    "cost_usd_per_hour": 1.2936642711864463,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.163636363636364,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 961.1999999999999,
+    "traffic_rps": 8.018181818181818
+   }
+  },
+  {
+   "t_epoch": 1795600688.6794877,
+   "t_utc": "09:58:08",
+   "elapsed_s": 47.1,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.8868556701030927e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009280742459396751,
+    "p95_s": 1.8992990654205606,
+    "cost_usd_per_hour": 1.286010915254243,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 7.927272727272727,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 938.1999999999999,
+    "traffic_rps": 7.836363636363636
+   }
+  },
+  {
+   "t_epoch": 1795600693.708534,
+   "t_utc": "09:58:13",
+   "elapsed_s": 52.2,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.904954954954955e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00970873786407767,
+    "p95_s": 1.9127118644067795,
+    "cost_usd_per_hour": 1.2783337627118696,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 7.563636363636363,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 897.0545454545454,
+    "traffic_rps": 7.49090909090909
+   }
+  },
+  {
+   "t_epoch": 1795600698.7295759,
+   "t_utc": "09:58:18",
+   "elapsed_s": 57.2,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9228846153846153e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00798661926718895,
+    "p95_s": 1.9238114114191815,
+    "cost_usd_per_hour": 1.265128474576276,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 7.607459629629629,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 895.9150614814814,
+    "traffic_rps": 7.475599629629629
+   }
+  },
+  {
+   "t_epoch": 1795600703.7519882,
+   "t_utc": "09:58:23",
+   "elapsed_s": 62.2,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9239381351546245e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.008738947135025467,
+    "p95_s": 1.922204113109014,
+    "cost_usd_per_hour": 1.2595710508474618,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 8.479934,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1002.2392629999999,
+    "traffic_rps": 8.362609793650794
+   }
+  },
+  {
+   "t_epoch": 1795600708.7704918,
+   "t_utc": "09:58:28",
+   "elapsed_s": 67.2,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9223080885933204e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.007852884584504236,
+    "p95_s": 1.9194201519191776,
+    "cost_usd_per_hour": 1.254897762711868,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.327324545454545,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1104.647616969697,
+    "traffic_rps": 9.198178398268398
+   }
+  },
+  {
+   "t_epoch": 1795600713.782515,
+   "t_utc": "09:58:33",
+   "elapsed_s": 72.2,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9208823529411763e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009170912544138243,
+    "p95_s": 1.9214912280701753,
+    "cost_usd_per_hour": 1.2491810847457654,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.781818181818181,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1168.9272727272728,
+    "traffic_rps": 9.72556558080808
+   }
+  },
+  {
+   "t_epoch": 1795600718.7944767,
+   "t_utc": "09:58:38",
+   "elapsed_s": 77.2,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9214912280701753e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009143942339945269,
+    "p95_s": 1.9179447852760736,
+    "cost_usd_per_hour": 1.2444620338983072,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.781818181818181,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1162.2363636363636,
+    "traffic_rps": 9.68860237037037
+   }
+  },
+  {
+   "t_epoch": 1795600723.8065524,
+   "t_utc": "09:58:43",
+   "elapsed_s": 82.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9179447852760736e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.009319836150006738,
+    "p95_s": 1.9180981595092024,
+    "cost_usd_per_hour": 1.237301084745764,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.8,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1161.2727272727273,
+    "traffic_rps": 9.690320787878788
+   }
+  },
+  {
+   "t_epoch": 1795600728.8294556,
+   "t_utc": "09:58:48",
+   "elapsed_s": 87.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9180981595092024e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.011152416356877323,
+    "p95_s": 1.9179878048780485,
+    "cost_usd_per_hour": 1.2317766101694922,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.8,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1169.8545454545454,
+    "traffic_rps": 9.781818181818181
+   }
+  },
+  {
+   "t_epoch": 1795600733.8457139,
+   "t_utc": "09:58:53",
+   "elapsed_s": 92.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9179878048780485e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.0111731843575419,
+    "p95_s": 1.9196107784431138,
+    "cost_usd_per_hour": 1.223953016949152,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.727272727272727,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1171.3090909090909,
+    "traffic_rps": 9.763636363636364
+   }
+  },
+  {
+   "t_epoch": 1795600738.8624332,
+   "t_utc": "09:58:58",
+   "elapsed_s": 97.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9196107784431138e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00931098696461825,
+    "p95_s": 1.9171296296296296,
+    "cost_usd_per_hour": 1.222981016949151,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.872727272727271,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1173.8545454545454,
+    "traffic_rps": 9.763636363636364
+   }
+  },
+  {
+   "t_epoch": 1795600743.8744366,
+   "t_utc": "09:59:03",
+   "elapsed_s": 102.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9171296296296296e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.011070110701107012,
+    "p95_s": 1.9178787878787877,
+    "cost_usd_per_hour": 1.2263281370336827,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.872727272727271,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1183.0727272727274,
+    "traffic_rps": 9.854545454545454
+   }
+  },
+  {
+   "t_epoch": 1795600748.8864834,
+   "t_utc": "09:59:08",
+   "elapsed_s": 107.3,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9178787878787877e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.01098901098901099,
+    "p95_s": 1.9152173913043478,
+    "cost_usd_per_hour": 1.2491552143737918,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.98181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1196.8181818181818,
+    "traffic_rps": 9.927272727272726
+   }
+  },
+  {
+   "t_epoch": 1795600753.8994594,
+   "t_utc": "09:59:13",
+   "elapsed_s": 112.4,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9152173913043478e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.010830324909747292,
+    "p95_s": 1.917065868263473,
+    "cost_usd_per_hour": 1.2722530195525412,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.0,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1214.3090909090909,
+    "traffic_rps": 10.072727272727272
+   }
+  },
+  {
+   "t_epoch": 1795600758.9136975,
+   "t_utc": "09:59:18",
+   "elapsed_s": 117.4,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.917065868263473e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.01275045537340619,
+    "p95_s": 1.9157975460122698,
+    "cost_usd_per_hour": 1.2839406101694906,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.963636363636365,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1199.1636363636362,
+    "traffic_rps": 9.981818181818182
+   }
+  },
+  {
+   "t_epoch": 1795600763.953446,
+   "t_utc": "09:59:23",
+   "elapsed_s": 122.4,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9157975460122698e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.012844036697247705,
+    "p95_s": 1.919378698224852,
+    "cost_usd_per_hour": 1.2839149830508465,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.927272727272726,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1191.0727272727272,
+    "traffic_rps": 9.909090909090908
+   }
+  },
+  {
+   "t_epoch": 1795600768.9684875,
+   "t_utc": "09:59:28",
+   "elapsed_s": 127.4,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.919378698224852e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.01090909090909091,
+    "p95_s": 1.9181547619047619,
+    "cost_usd_per_hour": 1.2896444745762703,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.018181818181818,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1204.0,
+    "traffic_rps": 9.999999999999998
+   }
+  },
+  {
+   "t_epoch": 1795600773.9825494,
+   "t_utc": "09:59:33",
+   "elapsed_s": 132.4,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9181547619047619e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.01098901098901099,
+    "p95_s": 1.921551724137931,
+    "cost_usd_per_hour": 1.2882313220338975,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.945454545454545,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1200.1636363636362,
+    "traffic_rps": 9.927272727272726
+   }
+  },
+  {
+   "t_epoch": 1795600778.994522,
+   "t_utc": "09:59:38",
+   "elapsed_s": 137.4,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.921551724137931e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.012681159420289852,
+    "p95_s": 1.9215909090909091,
+    "cost_usd_per_hour": 1.2875467118644062,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.0,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1214.9636363636364,
+    "traffic_rps": 10.036363636363637
+   }
+  },
+  {
+   "t_epoch": 1795600784.0144744,
+   "t_utc": "09:59:44",
+   "elapsed_s": 142.5,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "pending",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9215909090909091e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.01096892138939671,
+    "p95_s": 1.9227401129943502,
+    "cost_usd_per_hour": 1.2872666440677962,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.945454545454545,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1207.0,
+    "traffic_rps": 9.945454545454545
+   }
+  },
+  {
+   "t_epoch": 1795600789.0334733,
+   "t_utc": "09:59:49",
+   "elapsed_s": 147.5,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9227401129943502e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.010909090909090912,
+    "p95_s": 1.9209770114942528,
+    "cost_usd_per_hour": 1.2883814237288136,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.0,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1211.2545454545455,
+    "traffic_rps": 9.999999999999998
+   }
+  },
+  {
+   "t_epoch": 1795600794.047535,
+   "t_utc": "09:59:54",
+   "elapsed_s": 152.5,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9209770114942528e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.01088929219600726,
+    "p95_s": 1.9226123595505618,
+    "cost_usd_per_hour": 1.2918996610169493,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 9.927272727272726,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1213.709090909091,
+    "traffic_rps": 10.018181818181818
+   }
+  },
+  {
+   "t_epoch": 1795600799.0614939,
+   "t_utc": "09:59:59",
+   "elapsed_s": 157.5,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9226123595505618e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.00909090909090909,
+    "p95_s": 1.9209770114942528,
+    "cost_usd_per_hour": 1.289585898305085,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.0,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1213.2545454545455,
+    "traffic_rps": 10.0
+   }
+  },
+  {
+   "t_epoch": 1795600804.0914874,
+   "t_utc": "10:00:04",
+   "elapsed_s": 162.5,
+   "alerts": [
+    {
+     "name": "AgentHighLatencyP95",
+     "state": "firing",
+     "instance": null,
+     "activeAt": "2026-11-25T09:57:47.401817116Z",
+     "value": "1.9209770114942528e+00"
+    }
+   ],
+   "metrics": {
+    "error_rate": 0.007194244604316547,
+    "p95_s": 1.918235294117647,
+    "cost_usd_per_hour": 1.2946856949152545,
+    "instances_up": 2.0,
+    "retrieval_hit_rate_1m": 10.072727272727272,
+    "retrieval_hit_ratio_5m": 1.0,
+    "tokens_per_s_1m": 1224.7818181818182,
+    "traffic_rps": 10.109090909090908
+   }
+  }
+ ]
+}
