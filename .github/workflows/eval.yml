@@ -1,0 +1,56 @@
+# Quality gate cho agent (Exercise 7.3).
+# Chạy eval trên golden dataset mỗi khi mở/cập nhật Pull Request.
+# run_eval.py thoát với exit code 1 khi accuracy < --min-accuracy hoặc có regression,
+# GitHub Actions coi exit code khác 0 là step fail -> job fail -> PR không đạt status check.
+# Muốn CHẶN merge thật: Settings > Branches > Branch protection rule > "Require status checks
+# to pass before merging" > chọn check "eval" (job id bên dưới).
+name: quality-gate
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: 06-lab-complete/benchmark-observability/develop
+    env:
+      EVAL_PORT: "8000"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cài dependencies
+        run: pip install -r requirements.txt
+
+      - name: Bật agent v2 ở background
+        # MOCK_ERROR_RATE=0: tắt lỗi upstream ngẫu nhiên để gate không flaky
+        run: |
+          AGENT_VERSION=v2 MOCK_ERROR_RATE=0 PORT="$EVAL_PORT" python app.py > agent.log 2>&1 &
+          echo $! > agent.pid
+
+      - name: Chờ agent sẵn sàng (/health)
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sf "http://localhost:${EVAL_PORT}/health" > /dev/null; then
+              echo "agent sẵn sàng sau ${i} lần thử"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "agent không lên trong 30 giây" >&2
+          cat agent.log >&2
+          exit 1
+
+      - name: Quality gate (fail nếu accuracy < 85%)
+        run: python eval/run_eval.py --url "http://localhost:${EVAL_PORT}" --min-accuracy 0.85
+
+      - name: Tắt agent
+        if: always()
+        run: kill "$(cat agent.pid)" 2>/dev/null || true

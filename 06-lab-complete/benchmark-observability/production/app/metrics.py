@@ -48,6 +48,11 @@ RETRIEVAL_HITS = Counter(
     "agent_retrieval_total", "Kết quả bước retrieval của agent",
     ["result"],  # hit | miss
 )
+# Phân bố độ dài câu hỏi (Histogram, không dùng label vì độ dài có vô số giá trị)
+QUESTION_LENGTH = Histogram(
+    "agent_question_length_chars", "Độ dài câu hỏi (ký tự)",
+    buckets=(20, 50, 100, 200, 500, 1000, 2000),
+)
 AGENT_INFO = Gauge(
     "agent_info", "Thông tin phiên bản agent (luôn = 1)",
     ["version", "model"],
